@@ -1,0 +1,152 @@
+/* Get rid of the default margin that the browser does */
+body {
+    margin:0;
+}
+
+h1{
+    color: #4c6aa5;
+}
+
+/* Align element in center (need display: inline-block for the li)*/
+#navigation{
+    text-align: center;
+}
+
+/* Target the <ul> element in the navigation div */
+#navigation ul{
+    /* get rid of bulletpoints */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* overflow is clipped and elements cant overflow */
+    overflow: hidden;
+    /* colour of the background */
+    background-color: #5f84ce;
+    /* position is always in place */
+    position: fixed;
+    top: 0;
+    /* takes 100% of the browser's page */
+    width: 100%;
+    /* adds a border */
+    border-bottom: 5px solid #4c6aa5;
+}
+
+/* Target all of the <li> elements in the navigation div */
+#navigation li{
+    /* allow to center elements using text-align: center for the container div */
+    display: inline-block;
+}
+
+/* Target all the <a> elements in the <li> in the navigation div */
+#navigation li a{
+    /* Display this as a block */
+    display: block;
+    /* All text is white */
+    color: white;
+    /* align the text to be in the center */
+    text-align: center;
+    /* add some white space around */
+    padding: 24px 50px;
+    /* get rid of the link underline */
+    text-decoration: none;
+}
+
+#navigation a:hover {
+  color: rgb(219, 216, 216);
+}
+
+#navigation a.active {
+  background-color: #4c6aa5;
+  color: white;
+}
+
+/* Main container */
+.container{
+    /* set to be the full size of the browser page */
+    width: 85%;
+    height: 100%;
+    /* move a 100px down from the top margin */
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image div */
+#image{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    display: block;
+}
+
+/* Main text div */
+#main{
+    /* Change the size to be automatic which is reflected on the block before it (image) */
+    width: auto;
+}
+
+img{
+    animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+#wrapper{
+    display :inline-block; /* Take size of content */
+}
+
+#wrapper h1{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 2.3s steps(40, end),
+    blink-caret .50s step-end infinite; 
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}

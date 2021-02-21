@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Contact</title>
+	<!-- Using external CSS -->
+	<link href="../css/styles.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<!-- Adding a div element with an id attribute styled in the external css file -->
+	<div id="navigation">
+		<!-- Navigation links leading to pages in the directory of the folder -->
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a class="active" href="#">Contact</a></li>
+		</ul>
+		<!-- End of navigation block -->
+	</div>
+	<!-- Adding a div element with an id attribute styled in the external css file -->
+	<div class="container">
+		<!-- Main text content -->
+		<form action="">
+
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			<label for="country">Country</label>
+			<select id="country" name="country">
+				<option value="australia">Australia</option>
+				<option value="canada">Canada</option>
+				<option value="usa">USA</option>
+			</select>
+
+			<label for="subject">Subject</label>
+			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+			<input type="submit" value="Submit">
+
+		</form>
+		<!-- End of container block -->
+	</div>
+</body>
+
+</html>
